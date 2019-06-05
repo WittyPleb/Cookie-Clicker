@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Cookie Clicker</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+    </script>
+    <style type="text/css">
+    body {
+      padding-top: 20px;
+    }
+    .info {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: -10px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <p>This game is under extreme development, expect major bugs. Auto saving is currently not implemented. To save your game, please click the 'Save Game' button in the top right before closing it, or you will lose all your cookies.</p>
+    </div>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Cookie Clicker</div>
+      </div>
+    </div>
+  </body>
+</html>
